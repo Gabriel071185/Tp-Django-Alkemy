@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title  %}{% endblock %} </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/Alkemy.ico' %}">
+</head>
+<body>
+
+    <header class="bg-dark" style="height: 100px; display: flex; align-items: center; justify-content: space-between;">
+        <div class="container">
+            <div class="row align-items-center">
+               
+                <div class="col-md-2">
+                    <img src="{% static 'img/Alkemy.webp' %}" alt="Logo" class= "img-fluid rounded"style="max-height: 80px" >
+                </div>
+                
+                <div class="col-md-10 text-right">
+                    <nav>
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'inicio' %}"style="color:{%if activo == "inicio" %}#3454d1{% else %}white{%endif%} ">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'listado_productos' %}" style="color:{%if activo == "listado_producto" %}#3454d1{% else %}white{%endif%} ">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'listado_proveedor' %}"style="color:{%if activo == "listado_proveedor" %}#3454d1{% else %}white{%endif%} ">Proveedores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'agregar_producto' %}"style="color:{%if activo == "agregar_producto" %}#3454d1{% else %}white{%endif%} ">Cargá tus productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'agregar_proveedor' %}"style="color:{%if activo == "agregar_proveedor" %}#3454d1{% else %}white{%endif%} ">Sumáte como Proveedor</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+{% block content %}
+
+
+
+
+
+
+
+{% endblock  %}
+
+
+
+
+
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>

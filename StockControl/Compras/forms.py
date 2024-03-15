@@ -10,7 +10,7 @@ class ProductoForm(forms.ModelForm):
                    'nombre' : forms.TextInput(attrs={'class':'form-control', 'placeholder': 'Ingrese nombre de su producto'  }),
                    'precio': forms.NumberInput(attrs={'class':'form-control', 'placeholder': 'Ingrese el precio de su producto'  }),
                    'stock_actual' : forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese el stock de su producto' }),
-                   'proveedor': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Su nombre de Proveedor' })
+                   'proveedor': forms.Select(attrs={'class': 'form-control', 'placeholder': 'Su nombre de Proveedor' })
                    }
 
 

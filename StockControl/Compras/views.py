@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-
+from django.urls import reverse
 from .forms import ProductoForm 
 from .forms import ProveedorForm
 from .models import Producto, Proveedor
@@ -23,15 +23,15 @@ def listadoProveedor(request):
             'proveedor' : proveedor  }
     return render(request,'listado_proveedor.html', context )
 
-    
+
+
+
 def agregarProducto(request):
-
-
     if request.method == 'POST':
         form = ProductoForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('listado_producto')
+            return redirect(reverse('listado_producto'))
     else:
         form = ProductoForm()
     return render(request, 'agregar_producto.html', {'form': form,'activo': 'agregar_producto'} )

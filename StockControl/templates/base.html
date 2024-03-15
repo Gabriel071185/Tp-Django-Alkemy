@@ -26,7 +26,7 @@
                                 <a class="nav-link" href="{% url 'inicio' %}"style="color:{%if activo == "inicio" %}#3454d1{% else %}white{%endif%} ">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'listado_productos' %}" style="color:{%if activo == "listado_producto" %}#3454d1{% else %}white{%endif%} ">Productos</a>
+                                <a class="nav-link" href="{% url 'listado_producto' %}" style="color:{%if activo == "listado_producto" %}#3454d1{% else %}white{%endif%} ">Productos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'listado_proveedor' %}"style="color:{%if activo == "listado_proveedor" %}#3454d1{% else %}white{%endif%} ">Proveedores</a>
@@ -47,16 +47,18 @@
 
 {% block content %}
 
-
-
-
-
-
-
 {% endblock  %}
 
 
-
+<footer class="footer mt-auto py-3 bg-dark fixed-bottom">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <img src="{%static 'img/footer.webp.png' %}" class="img-fluid rounded" alt="Descripción de la imagen">
+            </div>
+        </div>
+    </div>
+</footer>
 
 
     

@@ -6,8 +6,73 @@
 {% block content %} 
 
 
-gaby Inicio
-
+<div class="container ">
+    <div class="row justify-content-center">
+        <div class="col-md-8" style="margin-bottom: 140px;">
+            <h1 class="text-center mt-5">Sistema de gestión de personas </h1>
+            <h2 class="text-center">Trabajo integrador individual</h2>
+            <h3>📌 Premisa</h3>
+            <p>Construir una aplicación con Django para agregar nuevos clientes y poder listarlos.</p>
+            <h3>📝 Requerimientos</h3>
+            <p>Se pide crear un proyecto que podría ser llamado StockControl:</p>
+            <ul>
+                <li>✓ Agregar una app llamada compra.</li>
+                <li>✓ Dentro de esta app se deben agregar los modelos Producto y Proveedor (ver más abajo los fields requeridos).</li>
+                <li>✓ El Producto debe estar relacionado con el Proveedor: entiéndase que un Proveedor es una foreignkey en Producto.</li>
+                <li>✓ Crear el archivo migration y ejecutarlo.</li>
+            </ul>
+            <p>La aplicación debe proveer la funcionalidad necesaria para realizar las siguientes operaciones:</p>
+            <ul>
+                <li> Agregar un nuevo Proveedor con el siguiente detalle:</li>
+                <ul>
+                    <li>↪ nombre (texto)</li>
+                    <li>↪ apellido (texto)</li>
+                    <li>↪ dni (integer)</li>
+                    <li>↪ La idea es tener un formulario que permita agregar un nuevo proveedor.</li>
+                </ul>
+                <li> Agregar un nuevo Producto con el siguiente detalle:</li>
+                <ul>
+                    <li>↪ nombre (texto)</li>
+                    <li>↪ precio (float o integer)</li>
+                    <li>↪ stock_actual (integer)</li>
+                    <li>↪ proveedor (foreignkey con el modelo Proveedor)</li>
+                    <li>↪ La idea es tener un formulario que permita agregar un nuevo producto.</li>
+                </ul>
+                <li> Listar todos los productos registrados en la base de datos:</li>
+                <ul>
+                    <li>↪ La idea es tener disponible una vista que muestre el listado de todos los productos a través de una tabla html.</li>
+                </ul>
+            </ul>
+            <h3>📝Acciones:</h3>
+            <ul>
+                <li> Listar todos los productos registrados en la base de datos</li>
+                <li> Permitir agregar un nuevo producto.</li>
+                <li> Permitir agregar un nuevo proveedor.</li>
+                <li> Tener disponible en el Admin el modelo del producto y del proveedor.</li>
+            </ul>
+            <p>La aplicación debe permitir almacenar nuevos productos y proveedores para luego mostrarlos en un listado.</p>
+            <h3>🎁Bonus</h3>
+            <ul>
+                <li> Implementar uso de Bootstrap en los HTMLs</li>
+                <li> Generar el listado de Proveedores.</li>
+                <li> Generar el archivo requirements del proyecto</li>
+            </ul>
+            <h4>⚠️Aclaraciones:</h4>
+            <ul>
+                <li> Solo se deben implementar las vistas para el listado y el alta de productos y proveedores.</li>
+                <li> Lo que se describe en la sección de Bonus no es algo obligatorio, pero suma aprendizaje y experiencia.</li>
+            </ul>
+            <h3>📭Entregables</h3>
+            <ul>
+                <li> Repositorio en GitHub</li>
+                <ul>
+                    <li> Código</li>
+                    <li> Documentación pertinente</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
 
 
 {% endblock  %}

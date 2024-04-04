@@ -1,5 +1,5 @@
  {% extends "base.html"  %}   
- {% load static%}
+ {% load static %}
  {% block title %} Listado de Productos {% endblock %} 
 
 
@@ -30,6 +30,12 @@
             </tr>
             {% endfor %}
         </tbody>
+        <a href="{% url 'agregar_producto' %}" class="btn btn-primary">Agregar un nuevo producto</a>
+
     </table>
 </div>
+
+
+
+
 {% endblock  %}

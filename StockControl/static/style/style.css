@@ -1,0 +1,7 @@
+li{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+body {
+    background-image: linear-gradient(to right, #2bbfe4 , #eaecc6 35%);
+}

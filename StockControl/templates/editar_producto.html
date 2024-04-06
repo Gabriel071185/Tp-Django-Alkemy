@@ -4,14 +4,17 @@
  {% block content %}
 
 
-<div class="container">
+<div class="container mt-5">
     <h2 class="text-center">Editar Producto</h2>
-    <form method="post" action="{% url 'editar_producto' producto.id %}">
+    <form method="post"  action="{% url 'editar_producto' producto.id %}">
         {% csrf_token %}
         {{ form.as_p }}
+        <div class="d-flex justify-content-end gap-3">
         <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <a href="{% url 'listado_producto' %}" class="btn btn-danger">Cancelar</a>
+        </div>
     </form>
-    <a href="{% url 'listado_producto' %}" class="btn btn-secondary">Volver al listado</a>
+    
 </div>
 
 

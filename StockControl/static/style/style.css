@@ -4,4 +4,9 @@ li{
 }
 body {
     background-image: linear-gradient(to right, #9ed2e1 , #9b9b96 85%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+

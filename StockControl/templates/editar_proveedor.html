@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Corrige tus datos {% endblock %} 
+ {% block content %}
+
+
+<div class="container">
+    <h2 class="text-center">Editar Proveedor</h2>
+    <form method="post" action="{% url 'editar_proveedor' proveedor.id %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    </form>
+    <a href="{% url 'listado_proveedor' %}" class="btn btn-secondary">Volver al listado</a>
+</div>
+
+
+ {% endblock %}

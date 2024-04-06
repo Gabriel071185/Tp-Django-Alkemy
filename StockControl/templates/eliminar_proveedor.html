@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Baja de proveedores {% endblock %} 
+ {% block content %}
+
+ <div class="container">
+    <h2 class="text-center">Eliminar Proveedor</h2>
+    <p>¿Estás seguro de que quieres eliminar el proveedor "{{ proveedor.nombre }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="proveedor_id" value="{{ proveedor.id }}">
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a href="{% url 'listado_proveedor' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+
+ {% endblock %}
